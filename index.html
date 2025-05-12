@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 | kopano Damane</title>
+    <meta name="description"
+        content="Kopano Damane's personal portfolio showcasing web development work, professional skills, and projects.">
+    <meta name="author" content="Kopano Damane">
+    <title>Kopano Damane Portfolio</title>
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <!-- Scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
+
 <body>
-    <h1>Test page</h1>
+    <header>
+        <div class="profile-container">
+            <img src="images/kopano_profile.jpg" alt="Kopano's headshot image" class="profile-img">
+            <span class="profile-name">Kopano Damane, Cape Town</span>
+            <!-- Toggle button added here -->
+            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+                <li><a href="https://github.com/Kopano-Damane-BYUI/wdd231">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/kopano-damane/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <div class="cards-row">
+            <div class="card course-work">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>Week 1</li>
+                    <li>Week 2</li>
+                    <li>Week 3</li>
+                    <li>Week 4</li>
+                    <li>Week 5</li>
+                    <li>Week 6</li>
+                    <li>Week 7</li>
+                </ul>
+            </div>
+            <div class="card city-info">
+                <h2>Cape Town, South Africa</h2>
+                <figure>
+                    <img src="images/Robben_island.jpg" alt="Image of Robben Island">
+                    <figcaption>Robben Island</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="card full-width">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>
+            </div>
+            <div class="courses">
+                <!-- Courses will be added dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Kopano Damane, Cape Town 🌍</p>
+        <p>Last updated: 🕒 <span id="last-updated"></span></p>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,1 @@
+document.getElementById('last-updated').textContent = new Date().getFullYear();
