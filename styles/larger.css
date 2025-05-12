@@ -110,6 +110,7 @@ main {
     margin: 0;
     width: 100%;
     text-align: center;
+    font-weight: 400;
 }
 
 /* Card inner content */
