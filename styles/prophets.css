@@ -1,0 +1,87 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #2e86ab;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Main content area */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Grid using auto-fit */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Individual Prophet Card */
+section {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #2a2a2a;
+}
+
+section p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 12px;
+    object-fit: cover;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2e86ab;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
