@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Maria's Boutique",
+        "address": "123 Main St, Timbuktu",
+        "phone": "(223) 555-1111",
+        "website": "mariasboutique.com",
+        "image": "boutique.webp",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Timbuktu Tech Solutions",
+        "address": "456 Tech St, Timbuktu",
+        "phone": "(223) 555-2222",
+        "website": "timbuktutech.com",
+        "image": "Technology-industry.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Eco Food Market",
+        "address": "789 Green St, Timbuktu",
+        "phone": "(223) 555-3333",
+        "website": "ecofoodmarket.com",
+        "image": "food-market.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Timbuktu Construction Co.",
+        "address": "101 Builder Ave, Timbuktu",
+        "phone": "(223) 555-4444",
+        "website": "timbuktuconstruction.com",
+        "image": "construction.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Timbuktu Bank",
+        "address": "202 Finance Rd, Timbuktu",
+        "phone": "(223) 555-5555",
+        "website": "timbuktubank.com",
+        "image": "finance.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Timbuktu Fitness",
+        "address": "303 Health St, Timbuktu",
+        "phone": "(223) 555-6666",
+        "website": "timbuktufitness.com",
+        "image": "fitness.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Timbuktu Travel Agency",
+        "address": "404 Travel Blvd, Timbuktu",
+        "phone": "(223) 555-7777",
+        "website": "timbuktu-travel.com",
+        "image": "travel-agencies.jpg",
+        "membershipLevel": 1
+    }
+]
