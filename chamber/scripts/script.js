@@ -4,6 +4,7 @@ async function loadDirectory() {
         const response = await fetch('data/members.json');
         const members = await response.json();
         const directorySection = document.getElementById('directory');
+        if (!directorySection) return;
         directorySection.innerHTML = '';
 
         members.forEach(member => {
@@ -45,6 +46,7 @@ async function loadCurrentWeather() {
         const data = await response.json();
         
         const weatherStatus = document.getElementById('weather-status');
+        if (!weatherStatus) return;
 
         const temperature = data.main.temp;
         const description = data.weather[0].description;
@@ -76,7 +78,10 @@ async function loadCurrentWeather() {
         `;
     } catch (error) {
         console.error('Error loading weather data:', error);
-        document.getElementById('weather-status').innerText = 'Failed to load weather data.';
+        const weatherStatus = document.getElementById('weather-status');
+        if (weatherStatus) {
+            weatherStatus.innerText = 'Failed to load weather data.';
+        }
     }
 }
 
@@ -91,6 +96,7 @@ async function loadWeatherForecast() {
         const data = await response.json();
 
         const forecastList = document.getElementById('forecast-list');
+        if (!forecastList) return;
         forecastList.innerHTML = '';
 
         const desiredDays = ['Today', 'Wednesday', 'Thursday'];
@@ -126,37 +132,92 @@ async function loadWeatherForecast() {
         });
     } catch (error) {
         console.error('Error loading weather forecast:', error);
-        document.getElementById('forecast-list').innerText = 'Failed to load forecast.';
+        const forecastList = document.getElementById('forecast-list');
+        if (forecastList) {
+            forecastList.innerText = 'Failed to load forecast.';
+        }
     }
 }
 
 // Set year and last modified
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+const lastModifiedEl = document.getElementById('lastModified');
+if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
 
 // Call functions
-loadDirectory();
-loadCurrentWeather();
-loadWeatherForecast();
+document.addEventListener('DOMContentLoaded', () => {
+    loadDirectory();
+    loadCurrentWeather();
+    loadWeatherForecast();
+    loadSpotlightData();
 
-// Toggle views
-document.getElementById("grid-btn").addEventListener("click", () => {
+    const gridBtn = document.getElementById("grid-btn");
+    const listBtn = document.getElementById("list-btn");
     const directory = document.getElementById("directory");
-    directory.classList.add("grid");
-    directory.classList.remove("list");
+
+    if (gridBtn && listBtn && directory) {
+        gridBtn.addEventListener("click", () => {
+            directory.classList.add("grid");
+            directory.classList.remove("list");
+        });
+
+        listBtn.addEventListener("click", () => {
+            directory.classList.add("list");
+            directory.classList.remove("grid");
+        });
+    }
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("show");
+            menuToggle.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
+        });
+    }
 });
 
-document.getElementById("list-btn").addEventListener("click", () => {
-    const directory = document.getElementById("directory");
-    directory.classList.add("list");
-    directory.classList.remove("grid");
-});
+// SPOTLIGHT SECTION
+async function loadSpotlightData() {
+    try {
+        const response = await fetch('data/members.json');
+        const members = await response.json();
 
-// Responsive menu toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
+        const spotlightContainer = document.getElementById('spotlight-container');
+        if (!spotlightContainer) return;
 
-menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
-    menuToggle.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
-});
+        const spotlightMembers = members.filter(m => m.membershipLevel === 2 || m.membershipLevel === 3);
+        const shuffled = spotlightMembers.sort(() => 0.5 - Math.random());
+        const selected = shuffled.slice(0, 3);
+
+        selected.forEach(member => {
+            const card = document.createElement('div');
+            card.classList.add('directory-item');
+
+            card.innerHTML = `
+                <div class="card-heading">
+                    <h3>${member.name}</h3>
+                    <p>Business tag line name</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-image">
+                        <img src="images/${member.image}" alt="${member.name}" />
+                    </div>
+                    <div class="card-content">
+                        <p>${member.address}</p>
+                        <p><strong>Phone:</strong> ${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                        <p><strong>Membership:</strong> ${member.membershipLevel === 3 ? 'Gold' : 'Silver'}</p>
+                    </div>
+                </div>
+            `;
+
+            spotlightContainer.appendChild(card);
+        });
+    } catch (error) {
+        console.error('Error loading spotlight data:', error);
+    }
+}

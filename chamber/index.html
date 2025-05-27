@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Welcome to the Timbuktu Chamber of Commerce homepage — discover local events, weather updates, and business spotlights supporting our community." />
+    <meta name="author" content="Kopano Damane" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Timbuktu Chamber of Commerce | Home" />
+    <meta property="og:description"
+        content="Explore local events, weather forecasts, and business spotlights to support Timbuktu’s vibrant community." />
+    <meta property="og:image"
+        content="https://kopano-damane-byui.github.io/wdd231/chamber/images/business-partneships.jpg" />
+    <meta property="og:url" content="https://kopano-damane-byui.github.io/wdd231/chamber/index.html" />
+
+    <title>Timbuktu Chamber of Commerce | Home</title>
+    <link rel="icon" href="images/t-logo.ico" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Scripts -->
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="images/t-logo.jpg" alt="Timbuktu Chamber logo" />
+                <div class="nav-title">
+                    <strong>Timbuktu</strong>
+                    <span>Chamber of Commerce</span>
+                </div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><span class="theme-toggle-circle"></span></li>
+            </ul>
+            <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+        </nav>
+        <div class="hero">
+            <img src="images/business-partneships.jpg" alt="An image of a group of business people" />
+            <a href="join.html" class="cta-button" role="button">Be Part of Something Bigger — Join Today!</a>
+        </div>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div class="info">
+            <section id="events" class="info-card">
+                <h2>Events</h2>
+                <div id="events-list">
+                </div>
+            </section>
+            <section id="current-weather" class="info-card">
+                <h2>Current Weather</h2>
+                <p id="weather-status">Loading...</p>
+            </section>
+            <section id="weather-forecast" class="info-card">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-list">
+                    <!-- Weather forecast items will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+                <!-- Spotlight member cards will be loaded here dynamically -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>Timbuktu Chamber of Commerce</p>
+            <address>
+                10 Rue De La Paix <br />
+                Timbuktu, Mali 999<br />
+                info@timbuktucc.org<br />
+                (223) 555-2300
+            </address>
+        </div>
+        <div class="footer-center">
+            <a href="https://www.youtube.com/">
+                <img src="images/youtube.png" alt="youtube" />
+            </a>
+            <a href="https://x.com/">
+                <img src="images/twitter.png" alt="twitter" />
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.png" alt="linkedin" />
+            </a>
+        </div>
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Kopano Damane</p>
+            <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
