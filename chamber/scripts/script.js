@@ -221,3 +221,56 @@ async function loadSpotlightData() {
         console.error('Error loading spotlight data:', error);
     }
 }
+
+// This is the join page!
+document.addEventListener("DOMContentLoaded", () => {
+    const timestampInput = document.getElementById("timestamp");
+    if (timestampInput) {
+      const now = new Date();
+      timestampInput.value = now.toISOString();
+    }
+});
+ 
+// Modal functionality
+document.querySelectorAll('.membership-card a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const modalId = link.getAttribute('href').replace('#', '');
+      document.getElementById(modalId).style.display = 'block';
+    });
+  });
+  
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+// Show submitted form data on thankyou.html
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.pathname.includes("thankyou.html")) {
+      const params = new URLSearchParams(window.location.search);
+      const data = {
+        "First Name": params.get("fname"),
+        "Last Name": params.get("lname"),
+        "Email": params.get("email"),
+        "Phone": params.get("phone"),
+        "Organization": params.get("organization"),
+        "Description": params.get("description"),
+        "Submitted At": params.get("timestamp")
+      };
+  
+      const card = document.querySelector(".thankyou-card");
+      if (card) {
+        const details = document.createElement("div");
+        details.classList.add("submitted-details");
+  
+        for (let [key, value] of Object.entries(data)) {
+          const p = document.createElement("p");
+          p.innerHTML = `<strong>${key}:</strong> ${value || "(not provided)"}`;
+          details.appendChild(p);
+        }
+  
+        card.appendChild(details);
+      }
+    }
+  });
+  

@@ -38,15 +38,90 @@
             </ul>
             <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
         </nav>
-        <div class="hero">
-            <img src="images/business-partneships.jpg" alt="An image of a group of business people">
-            <button>Keynote Tickets</button>
-        </div>
     </header>
-    <main>
-        <h1>Join</h1>
-
-    </main>
+    <section class="join-form-section">
+        <div class="form-container">
+            <h1>Membership application form</h1>
+            <form method="get" action="thankyou.html" class="join-form">
+                <label>
+                    First Name:
+                    <input type="text" name="fname" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+            
+                <label>
+                    Last Name:
+                    <input type="text" name="lname" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+            
+                <label>
+                    Title/Position:
+                    <input type="text" name="title" title="Your title within the organization" autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}" placeholder="e.g., Marketing Manager">
+                </label>
+            
+                <label>
+                    Email:
+                    <input type="email" name="email" title="Enter a valid email address" autocomplete="email" required
+                        placeholder="example@email.com">
+                </label>
+            
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+            
+                <label>
+                    Organization Name:
+                    <input type="text" name="organization" title="Enter your organization name" autocomplete="organization"
+                        required>
+                </label>
+            
+                <label>
+                    Membership Level:
+                    <select name="membership" title="Choose a membership level" required>
+                        <option value="" disabled selected>Select a level</option>
+                        <option value="np">NP Membership (Non-profit, Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+            
+                <label>
+                    Organization Description:
+                    <textarea name="description" title="Brief description of your organization" rows="4" cols="30"></textarea>
+                </label>
+            
+                <input type="hidden" name="timestamp" id="timestamp">
+            
+                <input type="submit" value="Join Now">
+            </form>
+        </div>
+    
+        <div class="membership-cards-container">
+            <h2>Membership levels</h2>
+            <div class="membership-card" id="np-card">
+                <h3>NP Membership</h3>
+                <p>Ideal for non-profit organizations. No fees.</p>
+                <a href="#np-modal">View Benefits</a>
+            </div>
+            <div class="membership-card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>Entry-level membership with basic perks.</p>
+                <a href="#bronze-modal">View Benefits</a>
+            </div>
+            <div class="membership-card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <p>Includes event discounts and homepage spotlights.</p>
+                <a href="#silver-modal">View Benefits</a>
+            </div>
+            <div class="membership-card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <p>Premium benefits including advertising & more.</p>
+                <a href="#gold-modal">View Benefits</a>
+            </div>
+        </div>
+    </section>      
     <footer>
         <div class="footer-left">
             <p>Timbuktu Chamber of Commerce</p>
@@ -75,6 +150,53 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('np-modal')">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Free membership</li>
+                <li>Event invitations</li>
+                <li>Basic directory listing</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Repeat for each membership -->
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('bronze-modal')">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Event invites</li>
+                <li>Business tips newsletter</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('silver-modal')">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Discounted event booths</li>
+                <li>Spotlight ad on homepage</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('gold-modal')">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Custom homepage spotlight</li>
+                <li>Business coaching sessions</li>
+            </ul>
+        </div>
+    </div>      
 </body>
 
 </html>
