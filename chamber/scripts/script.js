@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Email": params.get("email"),
         "Phone": params.get("phone"),
         "Organization": params.get("organization"),
-        "Description": params.get("description"),
+        "Description": params.get("description"), 
         "Submitted At": params.get("timestamp")
       };
   
