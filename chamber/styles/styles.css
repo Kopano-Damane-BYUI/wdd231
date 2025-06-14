@@ -788,3 +788,75 @@ header nav ul li a.active::after {
     margin: 0.5rem 0;
     font-size: 1rem;
 }
+
+/*DISCOVER PAGE*/
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.discover-card {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.discover-card h2 {
+    margin-top: 0;
+}
+
+.discover-card figure {
+    margin: 0;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Hover effect (non-mobile only) */
+@media (min-width: 641px) {
+    .discover-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Grid areas */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-areas:
+            "area1"
+            "area2"
+            "area3"
+            "area4"
+            "area5"
+            "area6"
+            "area7"
+            "area8";
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "area1 area2"
+            "area3 area4"
+            "area5 area6"
+            "area7 area8";
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "area1 area2 area3 area4"
+            "area5 area6 area7 area8";
+    }
+}

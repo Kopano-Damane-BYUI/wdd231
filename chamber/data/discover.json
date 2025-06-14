@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Sankoré Madrasah",
+      "address": "University St, Timbuktu, Mali",
+      "description": "An ancient center of learning and one of the oldest universities in the world.",
+      "image": "images/university.webp"
+    },
+    {
+      "name": "Timbuktu Market",
+      "address": "Market Square, Timbuktu, Mali",
+      "description": "Bustling with local traders, spices, textiles, and traditional Malian crafts.",
+      "image": "images/market_square.webp"
+    },
+    {
+      "name": "Tomb of Askia",
+      "address": "Gao Rd, Timbuktu, Mali",
+      "description": "UNESCO World Heritage Site and a brilliant example of Sudano-Sahelian architecture.",
+      "image": "images/tomb_of_askia.webp"
+    },
+    {
+      "name": "Desert Festival",
+      "address": "Sahara Outskirts, Timbuktu, Mali",
+      "description": "An annual music and cultural festival that celebrates Tuareg traditions and global music.",
+      "image": "images/desert_f.webp"
+    },
+    {
+      "name": "Djinguereber Mosque",
+      "address": "Main Mosque Ave, Timbuktu, Mali",
+      "description": "Built in 1327, this mosque is a symbol of Malian Islamic architecture.",
+      "image": "images/mosque.webp"
+    },
+    {
+      "name": "Timbuktu Museum",
+      "address": "Heritage Rd, Timbuktu, Mali",
+      "description": "Displays manuscripts, maps, and relics from Mali’s scholarly past.",
+      "image": "images/museum.webp"
+    },
+    {
+      "name": "Camel Safari",
+      "address": "Desert Access Point, Timbuktu, Mali",
+      "description": "Experience the Sahara on a guided camel trek through the dunes.",
+      "image": "images/camel_safari.webp"
+    },
+    {
+      "name": "Manuscripts Library",
+      "address": "Library Ln, Timbuktu, Mali",
+      "description": "Preserves thousands of ancient manuscripts dating back centuries.",
+      "image": "images/manuscripts_lib.webp"
+    }
+]
+  
