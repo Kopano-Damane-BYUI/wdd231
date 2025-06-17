@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Products – GlobalTech</title>
+
+    <meta name="description"
+        content="Browse and filter computers tailored to your needs, with real-time currency and student discount options.">
+    <meta name="author" content="Kopano Damane">
+
+    <link rel="icon" href="images/t-logo.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script type="module" src="scripts/products.mjs"></script>
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/wayfinding.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">GlobalTech</a>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" aria-current="page">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="form.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html" id="cartLink" aria-label="View cart">🛒 Cart (<span id="cartCount">0</span>)</a>
+    </header>
+
+    <main>
+        <section class="filter-controls" aria-label="Filter and settings">
+            <label for="purposeFilter">Filter by category:</label>
+            <select id="purposeFilter" aria-controls="productGrid" aria-label="Filter products by purpose">
+                <option value="All">All</option>
+                <option value="School">School</option>
+                <option value="Work">Work</option>
+                <option value="Programming">Programming</option>
+                <option value="Gaming">Gaming</option>
+            </select>
+
+            <label for="currencySelect">Currency:</label>
+            <select id="currencySelect" aria-label="Select currency">
+                <option value="USD">USD</option>
+                <option value="ZAR">ZAR</option>
+                <option value="EUR">EUR</option>
+            </select>
+
+            <label for="studentDiscountToggle" class="student-label">
+                <input type="checkbox" id="studentDiscountToggle"> Apply Student Discount (10% off)
+            </label>
+        </section>
+
+        <section id="product-list" aria-label="Product listings">
+            <div id="productGrid" class="product-grid"></div>
+        </section>
+
+        <div class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+            <div class="modal" role="document"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 GlobalTech. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

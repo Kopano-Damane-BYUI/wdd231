@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GlobalTech – Smart Computer Deals for Every Purpose</title>
+
+    <meta name="description" content="GlobalTech offers smart computer deals tailored for school, work, programming, and gaming.">
+    <meta name="author" content="Kopano Damane">
+    <meta property="og:title" content="GlobalTech – Smart Computer Deals">
+    <meta property="og:description" content="Shop computers designed for your needs with student discounts and global currency options.">
+
+
+    <link rel="icon" href="images/t-logo.ico">
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script type="module" src="scripts/home.mjs"></script>
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/wayfinding.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">GlobalTech</a>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>              
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="form.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" role="banner" aria-label="Introduction to GlobalTech">
+            <div class="hero-overlay">
+                <h1 class="index-section-title">Welcome to GlobalTech</h1>
+                <p>Your destination for smart computer deals — for school, work, programming, gaming, and more.</p>
+                <div class="category-buttons" role="navigation" aria-label="Shop by category">
+                    <a href="products.html?purpose=School" class="btn">For School</a>
+                    <a href="products.html?purpose=Work" class="btn">For Work</a>
+                    <a href="products.html?purpose=Programming" class="btn">For Programming</a>
+                    <a href="products.html?purpose=Gaming" class="btn">For Gaming</a>
+                </div>
+                <p class="student-discount-summary">🎓 Students get <strong>10% off</strong> with our exclusive
+                    discount!</p>
+            </div>
+        </section>
+
+        <section id="featured-products" aria-label="Featured products">
+            <h2 class="index-section-title">Featured Products</h2>
+            <div id="featuredGrid" class="product-grid"></div>
+        </section>
+
+        <section class="video-section" aria-label="Video demonstration">
+            <h2 class="video-title">Top 5 Best Desktop Computers for 2025</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/s9oz-DlyM0g" title="Top 5 BEST Desktop Computers in [2025]"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+          
+    </main>
+
+    <footer>
+        <p>© 2025 GlobalTech. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

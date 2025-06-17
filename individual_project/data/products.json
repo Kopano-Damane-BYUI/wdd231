@@ -1,0 +1,136 @@
+[
+    {
+      "id": 1,
+      "name": "MacBook Air M1",
+      "purpose": "Work",
+      "price": 999,
+      "currency": "USD",
+      "specs": "Apple M1, 8GB RAM, 512GB SSD",
+      "image": "images/macbook_air_m1.webp",
+      "featured": true,
+      "studentDiscountEligible": true
+    },
+    {
+      "id": 2,
+      "name": "Dell XPS 13",
+      "purpose": "Programming",
+      "price": 1099,
+      "currency": "USD",
+      "specs": "Intel i7, 16GB RAM, 512GB SSD",
+      "image": "images/dell_xps_13.webp",
+      "studentDiscountEligible": false
+    },
+    {
+      "id": 4,
+      "name": "Lenovo Legion 5",
+      "purpose": "Gaming",
+      "price": 1199,
+      "currency": "USD",
+      "specs": "Ryzen 7, 16GB RAM, RTX 3060",
+      "image": "images/lenovo_legion_5.webp",
+      "featured": true,
+      "studentDiscountEligible": false
+    },
+    {
+      "id": 5,
+      "name": "HP Pavilion x360",
+      "purpose": "School",
+      "price": 649,
+      "currency": "USD",
+      "specs": "Intel i3, 8GB RAM, 256GB SSD",
+      "image": "images/hp_pavilion_x360.webp",
+      "studentDiscountEligible": true
+    },
+    {
+      "id": 6,
+      "name": "ASUS ROG Zephyrus G14",
+      "purpose": "Gaming",
+      "price": 1499,
+      "currency": "USD",
+      "specs": "Ryzen 9, 16GB RAM, RTX 4070",
+      "image": "images/asus_rog_zephyrus_G14.webp",
+      "studentDiscountEligible": false
+    },
+    {
+      "id": 7,
+      "name": "Microsoft Surface Laptop 5",
+      "purpose": "Work",
+      "price": 1199,
+      "currency": "USD",
+      "specs": "Intel i5, 16GB RAM, 512GB SSD",
+      "image": "images/microsoft_surface_laptop 5.webp",
+      "studentDiscountEligible": true
+    },
+    {
+      "id": 9,
+      "name": "LG Gram 17",
+      "purpose": "Programming",
+      "price": 1399,
+      "currency": "USD",
+      "specs": "Intel i7, 16GB RAM, 1TB SSD",
+      "image": "images/lg_gram_17.webp",
+      "studentDiscountEligible": false
+    },
+    {
+      "id": 10,
+      "name": "HP Envy 13",
+      "purpose": "School",
+      "price": 749,
+      "currency": "USD",
+      "specs": "Intel i5, 8GB RAM, 256GB SSD",
+      "image": "images/hp_nvy_13.webp",
+      "studentDiscountEligible": true
+    },
+    {
+      "id": 12,
+      "name": "ASUS Vivobook",
+      "purpose": "Work",
+      "price": 549,
+      "currency": "USD",
+      "specs": "Intel i3, 8GB RAM, 256GB SSD",
+      "image": "images/asus_vivobook.webp",
+      "featured": true,
+      "studentDiscountEligible": true
+    },
+    {
+      "id": 13,
+      "name": "Lenovo ThinkPad X1",
+      "purpose": "Work",
+      "price": 1349,
+      "currency": "USD",
+      "specs": "Intel i7, 16GB RAM, 1TB SSD",
+      "image": "images/lenovo_thinkpad_X1.webp",
+      "studentDiscountEligible": false
+    },
+    {
+      "id": 14,
+      "name": "Acer Nitro 5",
+      "purpose": "Gaming",
+      "price": 999,
+      "currency": "USD",
+      "specs": "Intel i5, 16GB RAM, GTX 1650",
+      "image": "images/acer_nitro_5.webp",
+      "studentDiscountEligible": false
+    },
+    {
+      "id": 15,
+      "name": "Samsung Galaxy Book3",
+      "purpose": "School",
+      "price": 799,
+      "currency": "USD",
+      "specs": "Intel i5, 8GB RAM, 256GB SSD",
+      "image": "images/samsung_galaxy_book3.webp",
+      "studentDiscountEligible": true
+    },
+    {
+      "id": 16,
+      "name": "Framework Laptop",
+      "purpose": "Programming",
+      "price": 1049,
+      "currency": "USD",
+      "specs": "Intel i5, 16GB RAM, 512GB SSD",
+      "image": "images/framework_laptop.webp",
+      "studentDiscountEligible": true
+    }
+]
+  
